@@ -1,0 +1,43 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    background-image: url("../../fondonav.jpg");
+    border-bottom: 10px;
+  }
+
+  .logo {
+    height: 100px;
+    align-self: center;
+    }
+ .search{
+    color: blue;
+    margin-left: auto; /* Mover la barra de búsqueda hacia la derecha */
+ }
+
+ .searchBarContainer {
+   flex-grow: 2; /* Ocupar el espacio restante */
+   display: flex;
+   justify-content: center; /* Centrar horizontalmente los elementos */
+ }
+ .buttonContainer {
+  display: flex;
+  gap: 10px; /* Espaciado entre los botones */
+  margin-left: 3px; /* Mover los botones hacia la derecha */
+}
+
+.button {
+  background-color: #0ec504;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 5px;
+  border-radius:  20px 20px
+}
+.button:hover {
+  transform: scale(1.4); /* Escala el botón al 110% del tamaño original */
+}
+
+.navLink {
+  text-decoration: none;
+}

@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Butcherman&family=Cinzel:wght@500&display=swap');
+h1,
+h2{
+ font-family:'Butcherman', cursive;
+ background-color: rgb(0, 0, 0);
+ border-radius: 10px;
+ box-shadow: 1em;
+ color: aliceblue;
+ opacity: 0.8;
+ 
+}
+.character_Card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-top: 3em;
+}
+
+.character_Card:hover {
+  transform: scale(1.2);
+}
+
+
+
+.character_Card .character_photo_container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 300px;
+  border-color: rgb(232, 244, 255);
+  overflow: hidden;
+}
+
+.character_Card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  perspective: 1000px; /* Agregar perspectiva para el efecto 3D */
+}
+
+.character_Card .character_photo_container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 300px;
+  border-color: aliceblue;
+  overflow: hidden;
+  transform-style: preserve-3d; /* Mantener el estilo 3D para los elementos internos */
+  transition: transform 1s; /* Agregar una transición suave */
+}
+
+.character_Card .character_photo_container::before {
+  content: "";
+  position: absolute;
+  top: -7px;
+  right: -7px;
+  bottom: -7px;
+  left: -7px;
+  background-image: url(https://mystickermania.com/cdn/stickers/rick-and-morty/sticker_2060.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 90% 90%;
+  border-radius: 50%;
+  animation-name: rotateCharacter;
+  animation-duration: 10000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  z-index: -1;
+}
+
+@keyframes rotateCharacter {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.character_Card .character_photo_container img {
+  width: 150px;
+  border-radius: 50%;
+  border-color: white;
+  border-style: solid;
+  border-bottom: 1em;
+  transform: rotateY(0deg); /* Establecer la rotación inicial en 0 grados */
+  transition: transform 1s; /* Agregar una transición suave */
+}
+
+.character_Card:hover .character_photo_container {
+  transform: rotateY(180deg); /* Aplicar la rotación en el eje Y al pasar el mouse por encima */
+}
+
+.character_Card:hover .character_photo_container img {
+  transform: rotateY(-180deg); /* Aplicar la rotación inversa en el eje Y al pasar el mouse por encima */
+}
+
+button {
+  background-color: #0ec504;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  color: #fff;
+  font-size: 16px;
+  border-radius:  20px 20px ;
+  box-shadow: white 10px;
+}
+button:hover {
+  background-color: #ff2b05;
+  box-shadow: 0 0 10px #ff1e00, 0 0 20px #ff1e00, 0 0 40px #ff1e00, 0 0 80px #ff1e00;
+}
+.character_info {
+  width: 300px; /* Establece el ancho deseado */
+  height: 200px; /* Establece la altura deseada */
+  padding: 10px; /* Añade un espacio interno al contenedor si es necesario */
+  display: flex; /* Utiliza flexbox para ajustar el contenido */
+  flex-direction: column; /* Alinea el contenido en columna */
+  /* Distribuye el espacio verticalmente */
+}
+.character_info h1,
+.character_info h2,
+.character_info button {
+  flex-grow: 1; /* Hace que los elementos ocupen el ancho completo del contenedor */
+  margin-top: 5px; /* Agrega un margen superior opcional entre los elementos */
+  
+  line-height: 1.2;
+  max-height: 2.5em; /* Aproximadamente 3 líneas de texto */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Agrega puntos suspensivos (...) si el texto se desborda */
+  white-space: normal;
+}
+.character_info h1:hover {
+  box-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 40px #00ff00, 0 0 80px #00ff00; /* Establece los colores y el tamaño de la sombra */
+}
+.character_info h2:hover {
+  box-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 40px #00ff00, 0 0 80px #00ff00;
+}
