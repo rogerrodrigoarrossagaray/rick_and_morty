@@ -1,3 +1,3 @@
-const users =[{email: "ejemplo@mail.com", password: "ejemplo12"}];
+const users =[{email: "ejemplo1@mail.com", password: "ejemplo123"}];
 
 module.exports = users;

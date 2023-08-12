@@ -1,9 +1,15 @@
 const express = require("express");
-const router = require("./routes/index")
+const router = require("./routes/index");
+const { conn } = require('./DB_connection');
 
 const server=express();
 
-server.listen(3001,()=>{
+
+
+  
+  
+server.listen(3001,async()=>{
+  await conn.sync({ force : false});
   console.log('Server is running on port 3001');
 })
 
